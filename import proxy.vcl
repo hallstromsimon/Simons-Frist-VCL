@@ -2,7 +2,7 @@ import proxy
 
 sub vcl_recv {
     if(proxy.is_ssl ()) {
-        set req.http.X-forwarded-Proto = "hrrp" ;
+        set req.http.X-forwarded-Proto = "http" ;
     } else {
         set req.http.X-forwarded-Proto = "http" ;
     }
